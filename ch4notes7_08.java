@@ -15,11 +15,16 @@ public class ch4notes7_08
 
 public static void main (String[] args)
 {
-
+    int sum = 8, x=2, y=3;
+    
     mathy solver = new mathy();
 
     System.out.println(solver.abs(-5));
     System.out.println(abs(-8));
+    //System.out.println(add(5,6));
+    //System.out.println(add(5,6,7));
+    //System.out.println(add(x,y));
+    //System.out.println("x:"+x);
 
 /**/
 }// end of main
@@ -29,6 +34,11 @@ public static void main (String[] args)
     @param int value
     @return absoulute value of number
 */
+//public - accessible from other programs
+//static - no objects are made
+//int - returns an integer
+//abs - function name
+//int x - tells you what you have to pass in order for function to work (an integer)
 public static int abs (int x)
 {
     if (x < 0)
@@ -43,6 +53,7 @@ public static int abs (int x)
     @param double value
     @return absoulute value of number
 */
+//overloading - change the data type OR change the amount of data
 public static double abs (double x)
 {
     if (x < 0)
@@ -57,10 +68,11 @@ public static double abs (double x)
 
 
 
-
+//int x & int y - passed through, x = 2 and y = 3
 public static int add (int x, int y)
-{   //System.out.println(sum );
+{   System.out.println("hi");
     int sum;      //sum x and y are local var
+    x = 52;
     sum = x+y;
 
     return sum;
@@ -68,6 +80,17 @@ public static int add (int x, int y)
 
 }//end of add
 
+
+
+public static int add (int x, int y, int z)
+{   System.out.println("hello");
+    int sum;      //sum x and y and z are local var
+    sum = x+y+z;
+
+    return sum;
+
+
+}//end of add
 
 }// end of class
 

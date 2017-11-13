@@ -10,6 +10,7 @@ public class mathy
     /**
         default constructor - stubed in
     */
+   //default because it has no parameters
     public mathy( )
     {
 
@@ -46,8 +47,12 @@ public class mathy
     {
         int z = x+y;
         return z;
-
-
+        
+        public add(int x, int y)
+        {
+        }
+        
+        
     }//end of add
 
 
