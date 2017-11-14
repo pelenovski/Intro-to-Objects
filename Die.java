@@ -23,37 +23,38 @@ public class Die
    }
 
    /**
-   	 constructor
+     constructor
      Explicitly sets the size of the die. Defaults to a size of
      six if the parameter is invalid < MIN_FACES.
      Initial face value is random.
      @parm int number of sides of the die
    */
+  
+  public Die (int number_of_faces)
+  {
+      faceValue = 1;
+      
+      if (number_of_faces < 4)
+        numFaces = 6;
+      else
+        numFaces = number_of_faces;
+  }
 
-
-
-
-
-
-
-
-
-
-
+  
 
    /**
-   		Rolls the die and returns the result.
-   		@return
+        Rolls the die and returns the result.
+        @return
    */
    public int roll ()
    {
-      faceValue = 0; // you put the correct  code here
+      faceValue = generator.nextInt(numFaces)+1; // you put the correct  code here
       return faceValue;
    }
 
    /**
-   		Returns the current die value.
-   		@return _____________________write comment
+        Returns the current die value.
+        @return _____________________write comment
    */
    public int getFaceValue ()
    {
@@ -62,25 +63,32 @@ public class Die
 
 
   /**
-		Returns the current number of faces the die has.
-		@return _________________
+        Returns the current number of faces the die has.
+        @return _________________
   */
-
+   public int getnumFaces ()
+   {
+       return numFaces;
+    }
 
   /**
-  		Sets the number of faces of the Die
-  		@param _________________
+        Sets the number of faces of the Die
+        @param _________________
   */
-
+   //public int setFaces()
+   //{
+       
+   //}
+    
 
 
    /**
-   		Returns the current die value and number of sides as a String.
-   		@return _____________
+        Returns the current die value and number of sides as a String.
+        @return _____________
    */
    public String methodName ()
    {
-	  String data ="";
+      String data ="";
 
 
 
