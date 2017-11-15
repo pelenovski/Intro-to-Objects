@@ -22,10 +22,14 @@ public class SnakeEyes
       for (int roll = 1; roll <= ROLLS; roll++)
       {
          die1.roll();
-         System.out.print(die1.getFaceValue());
-         
+         die3.roll();
+         System.out.print(die1.getnumFaces());
+         //System.out.print(die1.getFaceValue());
          // write correct code to check for snake eyes
-
+         if (die1.getFaceValue() == 1 && die3.getFaceValue() == 1)
+         {
+             snakeEyes++;
+            }
       }
 
       System.out.println ("Number of rolls: " + ROLLS);

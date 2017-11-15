@@ -29,18 +29,18 @@ public class Die
      Initial face value is random.
      @parm int number of sides of the die
    */
-  
+
   public Die (int number_of_faces)
   {
-      faceValue = 1;
-      
+      roll();
+
       if (number_of_faces < 4)
         numFaces = 6;
       else
         numFaces = number_of_faces;
   }
 
-  
+
 
    /**
         Rolls the die and returns the result.
@@ -69,30 +69,39 @@ public class Die
    public int getnumFaces ()
    {
        return numFaces;
-    }
+   }
 
   /**
         Sets the number of faces of the Die
         @param _________________
   */
+ 
+   public void setFaces (int newFaces)
+   {
+       if (newFaces > MIN_FACES)
+       {
+           numFaces = newFaces;
+        }
+   }
    //public int setFaces()
    //{
-       
+
    //}
-    
+
 
 
    /**
         Returns the current die value and number of sides as a String.
         @return _____________
+        if no toString it will display Class name & address
    */
-   public String methodName ()
+   public String toString ()
    {
-      String data ="";
-
-
-
-      return data;
+       String data ="Face Value:"+ faceValue;
+       data += "\nNumber of Sides" + numFaces;
+       
+       
+       return data;
    }
 
 

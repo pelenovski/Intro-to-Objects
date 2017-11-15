@@ -48,9 +48,9 @@ public class mathy
         int z = x+y;
         return z;
         
-        public add(int x, int y)
-        {
-        }
+        //public add(int x, int y)
+        //{
+        //}
         
         
     }//end of add
